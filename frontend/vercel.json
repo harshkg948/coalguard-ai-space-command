@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://coalguard-ai-space-command.onrender.com/api/(.*)"
+      "destination": "https://coalguard-ai-space-command.onrender.com/api/$1"
     }
   ]
 }
