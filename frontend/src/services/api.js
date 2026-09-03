@@ -1,7 +1,15 @@
 import axios from 'axios';
 
+const getBaseURL = () => {
+  const customBase = import.meta.env.VITE_API_BASE_URL;
+  if (customBase) {
+    return `${customBase.replace(/\/$/, '')}/api/v1`;
+  }
+  return '/api/v1';
+};
+
 const apiClient = axios.create({
-  baseURL: '/api/v1', // Vite proxy automatically routes this to http://127.0.0.1:8000/api/v1
+  baseURL: getBaseURL(),
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
