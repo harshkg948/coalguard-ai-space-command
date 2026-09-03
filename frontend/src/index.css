@@ -1,0 +1,59 @@
+/* frontend/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #04060a !important;
+    color: #e2e8f0 !important;
+    font-family: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Sharp Industrial Control Room Borders & Surfaces */
+.industrial-panel {
+  background: #080c14 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 0px !important; /* Sharp corners for authentic hardware feel */
+  box-shadow: none !important;
+}
+
+.industrial-panel:hover {
+  border-color: #f59e0b !important;
+}
+
+/* Data-Dense Monospace Readouts */
+code, pre, .font-mono, span[class*="text-amber"], span[class*="text-emerald"] {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Technical Inputs & Controls */
+input, select, textarea {
+  background: #04060a !important;
+  border: 1px solid #334155 !important;
+  border-radius: 0px !important;
+  color: #f8fafc !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+input:focus, select:focus {
+  border-color: #f59e0b !important;
+  outline: none !important;
+}
+
+/* Command Terminal Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #04060a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
